@@ -5,13 +5,7 @@ def main():
     chars_dict = get_chars_dict(text)
     list_chars_dict = get_chars_list_dicts(chars_dict)
 
-    # print(get_report(chars_dict))
-    # print(f"{num_words} words found in the document")
     list_chars_dict.sort(reverse=True, key=sort_on)
-    # print(report(book_path, num_words, list_chars_dict))
-    # for key in chars_dict: 
-    #     print(f"key: {key} value: {chars_dict[key]}")
-
 
     print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document\n")
@@ -51,19 +45,6 @@ def get_chars_list_dicts(dict):
 
 def sort_on(dict):
     return dict["num"]
-
-
-# def report(path, num_words, sorted_list):
-#     print(f"--- Begin report of {path} ---")
-#     print(f"{num_words} words found in the document\n")
-
-#     print(sorted_list.sort(reverse=True, key="num"))
-#     # for i in sorted_list:
-#         # print(i)
-# # list_chars_dict.sort(reverse=True, key=sort_on))
-#     print("--- End report ---")
-
-
     
 
 main()
